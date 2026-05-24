@@ -5,7 +5,15 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Relative asset URLs allow the same dist build to run from public_html
+    // or from a cPanel sub-folder such as public_html/plumbing.
+    base: './',
     plugins: [react(), tailwindcss()],
+    build: {
+      assetsDir: 'assets',
+      emptyOutDir: true,
+      outDir: 'dist',
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
