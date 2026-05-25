@@ -18,6 +18,15 @@ View your app in AI Studio: https://ai.studio/apps/6fc77077-4fde-4515-bbbb-304a0
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## App structure
+
+- `index.html` loads the React entry point at `src/main.tsx`
+- `src/main.tsx` renders `src/App.tsx`
+- `src/App.tsx` is the minimal React application
+- `src/index.css` contains the base styling and Tailwind directives
+- `src/api/hello.ts` is a minimal example API helper module for local development
+
 ## cPanel shared hosting deployment
 
 This project builds to static files that can be uploaded to cPanel shared hosting.
